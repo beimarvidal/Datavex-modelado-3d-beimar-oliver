@@ -4,30 +4,30 @@ import { Box, MousePointer2, Sparkles, Zap } from "lucide-react"
 const features = [
   {
     icon: Box,
-    title: "Modelo 3D",
-    text: "Diseñado en Blender y preparado para la web.",
-  },
-  {
-    icon: MousePointer2,
-    title: "Interacción",
-    text: "Rotación, zoom y exploración del objeto 3D.",
+    title: "Criatura mítica",
+    text: "Representación del Jichi como serpiente legendaria de los ríos.",
   },
   {
     icon: Sparkles,
-    title: "Diseño moderno",
-    text: "Landing page con estilo futurista y efectos visuales.",
+    title: "Escamas doradas",
+    text: "Diseño visual inspirado en reflejos de oro y agua.",
+  },
+  {
+    icon: MousePointer2,
+    title: "Interacción 3D",
+    text: "El usuario podrá observar, rotar y explorar el modelo.",
   },
   {
     icon: Zap,
-    title: "Optimización",
-    text: "Preparado para cargar modelos GLB de forma eficiente.",
+    title: "Ambiente ilusorio",
+    text: "Efectos visuales para transmitir misterio, atracción y fantasía.",
   },
 ]
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-slate-950 px-6 py-24 text-white">
-      <div className="mx-auto max-w-7xl">
+    <section className="relative px-6 py-24">
+      <div className="mx-auto max-w-7xl rounded-3xl border border-white/10 bg-slate-950/45 p-8 backdrop-blur-xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,9 +35,9 @@ export default function FeaturesSection() {
           transition={{ duration: 0.7 }}
           className="mb-14 text-center"
         >
-          <p className="mb-4 text-cyan-300">Características</p>
+          <p className="mb-4 font-bold text-yellow-300">Características</p>
           <h2 className="text-4xl font-black md:text-6xl">
-            Experiencia visual interactiva
+            Leyenda y experiencia visual
           </h2>
         </motion.div>
 
@@ -52,9 +52,9 @@ export default function FeaturesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl hover:border-cyan-400/40"
+                className="rounded-3xl border border-white/10 bg-white/10 p-6 backdrop-blur-xl hover:border-yellow-400/40"
               >
-                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-cyan-400 text-slate-950">
+                <div className="mb-6 grid h-14 w-14 place-items-center rounded-2xl bg-yellow-400 text-slate-950">
                   <Icon size={26} />
                 </div>
 

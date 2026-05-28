@@ -3,10 +3,10 @@ import { Float, OrbitControls, Stars } from "@react-three/drei"
 
 function Object3D() {
   return (
-    <Float speed={2} rotationIntensity={1.5} floatIntensity={2}>
-      <mesh>
-        <torusKnotGeometry args={[1.1, 0.35, 180, 32]} />
-        <meshStandardMaterial color="#22d3ee" metalness={0.8} roughness={0.2} />
+    <Float speed={2} rotationIntensity={1.4} floatIntensity={2}>
+      <mesh scale={1.7}>
+        <torusKnotGeometry args={[1.1, 0.34, 180, 32]} />
+        <meshStandardMaterial color="#facc15" metalness={0.95} roughness={0.12} />
       </mesh>
     </Float>
   )
@@ -14,18 +14,24 @@ function Object3D() {
 
 export default function Scene3D() {
   return (
-    <div className="absolute inset-0 z-0">
-      <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-        <ambientLight intensity={0.7} />
-        <directionalLight position={[4, 5, 5]} intensity={2} />
-        <pointLight position={[-4, -2, 4]} intensity={2} color="#38bdf8" />
+    <Canvas
+      className="h-screen w-screen"
+      camera={{ position: [0, 0, 6], fov: 50 }}
+      gl={{ alpha: true, antialias: true }}
+    >
+      <color attach="background" args={["#020617"]} />
 
-        <Stars radius={80} depth={50} count={2500} factor={4} fade speed={1} />
+      <ambientLight intensity={0.8} />
+      <directionalLight position={[5, 5, 5]} intensity={2.4} />
+      <pointLight position={[-4, -2, 4]} intensity={3} color="#facc15" />
 
+      <Stars radius={100} depth={70} count={5000} factor={4} fade speed={1} />
+
+      <group position={[2.3, 0, 0]}>
         <Object3D />
+      </group>
 
-        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.5} />
-      </Canvas>
-    </div>
+      <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={1.2} />
+    </Canvas>
   )
 }
