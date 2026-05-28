@@ -10,29 +10,29 @@ export default function HeroSection() {
           transition={{ duration: 1 }}
           className="max-w-4xl"
         >
-          <p className="mb-5 inline-flex rounded-full border border-yellow-400/40 bg-yellow-400/10 px-5 py-2 text-sm font-bold text-yellow-300">
-            Leyenda amazónica · Experiencia 3D
+          <p className="mb-5 inline-flex rounded-full border border-cyan-300/40 bg-cyan-300/10 px-5 py-2 text-sm font-bold text-cyan-300">
+            Leyenda oriental · Espíritu del agua
           </p>
 
           <h1 className="text-7xl font-black leading-none md:text-9xl">
             EL{" "}
-            <span className="bg-gradient-to-r from-yellow-300 via-amber-400 to-yellow-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-emerald-400 to-teal-500 bg-clip-text text-transparent">
               JICHI
             </span>
           </h1>
 
           <p className="mt-8 max-w-3xl text-xl leading-9 text-slate-200 md:text-2xl">
-            Una serpiente dorada que habitaba los ríos. Su brillo parecía oro,
-            su presencia hipnotizaba y sus ilusiones atraían a quienes se
-            acercaban demasiado.
+            Un ser ancestral de las aguas, guardián de ríos, lagunas y
+            madrejones. Su presencia protege el equilibrio natural del oriente
+            boliviano.
           </p>
 
           <div className="mt-12 flex flex-wrap gap-4">
-            <a className="rounded-2xl bg-yellow-400 px-8 py-4 font-black text-slate-950">
+            <a href="#historia" className="rounded-2xl bg-cyan-300 px-8 py-4 font-black text-slate-950">
               Explorar historia
             </a>
 
-            <a className="rounded-2xl border border-white/20 bg-white/5 px-8 py-4 font-black text-white">
+            <a href="#modelo" className="rounded-2xl border border-cyan-300/30 bg-white/5 px-8 py-4 font-black text-white">
               Ver modelo 3D
             </a>
           </div>

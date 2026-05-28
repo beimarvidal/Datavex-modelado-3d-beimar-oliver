@@ -5,7 +5,6 @@ import jichiUrl from "../assets/models/jichi.glb?url"
 
 export default function JichiModel() {
   const groupRef = useRef()
-
   const { scene } = useGLTF(jichiUrl)
 
   useFrame((state) => {
@@ -13,39 +12,22 @@ export default function JichiModel() {
 
     if (!groupRef.current) return
 
-    // Movimiento flotante
-    groupRef.current.position.y =
-      -1 + Math.sin(time * 1.5) * 0.3
+    groupRef.current.position.y = -0.8 + Math.sin(time * 1.5) * 0.25
+    groupRef.current.position.x = Math.sin(time * 0.5) * 0.25
+    groupRef.current.rotation.y = Math.PI / 2 + Math.sin(time * 0.8) * 0.45
+    groupRef.current.rotation.z = Math.sin(time * 1.2) * 0.08
 
-    // Movimiento serpiente izquierda/derecha
-    groupRef.current.rotation.y =
-      Math.sin(time * 0.8) * 0.6
-
-    // Inclinación suave
-    groupRef.current.rotation.z =
-      Math.sin(time * 1.2) * 0.1
-
-    // Movimiento adelante/atrás
-    groupRef.current.position.x =
-      Math.sin(time * 0.5) * 0.4
-
-    // Respiración
-    const pulse =
-      1 + Math.sin(time * 2) * 0.03
+    const pulse = 1 + Math.sin(time * 2) * 0.03
 
     groupRef.current.scale.set(
-      1 * pulse,
-      1 * pulse,
-      1 * pulse
+      0.5 * pulse,
+      0.5 * pulse,
+      0.5 * pulse
     )
   })
 
   return (
-    <group
-      ref={groupRef}
-      position={[0, -1.2, 0]}
-      rotation={[0, Math.PI / 2, 0]}
-    >
+    <group ref={groupRef} position={[0, -0.8, 0]}>
       <primitive object={scene} />
     </group>
   )

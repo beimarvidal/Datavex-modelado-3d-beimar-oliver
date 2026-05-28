@@ -6,7 +6,7 @@ function Object3D() {
     <Float speed={2} rotationIntensity={1.4} floatIntensity={2}>
       <mesh scale={1.7}>
         <torusKnotGeometry args={[1.1, 0.34, 180, 32]} />
-        <meshStandardMaterial color="#facc15" metalness={0.95} roughness={0.12} />
+        <meshStandardMaterial color="#22d3ee" metalness={0.9} roughness={0.15} />
       </mesh>
     </Float>
   )
@@ -19,11 +19,11 @@ export default function Scene3D() {
       camera={{ position: [0, 0, 6], fov: 50 }}
       gl={{ alpha: true, antialias: true }}
     >
-      <color attach="background" args={["#020617"]} />
+      <color attach="background" args={["#021b1a"]} />
 
       <ambientLight intensity={0.8} />
       <directionalLight position={[5, 5, 5]} intensity={2.4} />
-      <pointLight position={[-4, -2, 4]} intensity={3} color="#facc15" />
+      <pointLight position={[-4, -2, 4]} intensity={3} color="#22d3ee" />
 
       <Stars radius={100} depth={70} count={5000} factor={4} fade speed={1} />
 
