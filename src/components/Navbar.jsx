@@ -10,7 +10,7 @@ export default function Navbar() {
           </div>
 
           <span className="text-lg font-black tracking-wide text-white">
-            EL JICHI 3D
+            EL JICHI
           </span>
         </div>
 
