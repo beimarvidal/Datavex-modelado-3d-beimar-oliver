@@ -15,6 +15,8 @@ import LoaderScreen from "./components/LoaderScreen"
 import CustomCursor from "./components/CustomCursor"
 import AmbientMusic from "./components/AmbientMusic"
 
+
+import CreativeProcessSection from "./components/CreativeProcessSection"
 function App() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#021b1a] text-white">
@@ -34,6 +36,7 @@ function App() {
         <Navbar />
         <HeroSection />
         <LegendSection />
+        <CreativeProcessSection />
         <TrailerSection />
         <PowersSection />
         <ModelSection />
