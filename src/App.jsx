@@ -11,11 +11,18 @@ import TeamSection from "./components/TeamSection"
 import Footer from "./components/Footer"
 import Scene3D from "./components/Scene3D"
 import SmoothScroll from "./components/SmoothScroll"
+import LoaderScreen from "./components/LoaderScreen"
+import CustomCursor from "./components/CustomCursor"
+import AmbientMusic from "./components/AmbientMusic"
 
 function App() {
   return (
     <main className="relative min-h-screen overflow-x-hidden bg-[#021b1a] text-white">
+      
+      <LoaderScreen />
       <SmoothScroll />
+      <CustomCursor />
+      <AmbientMusic />
 
       <div className="fixed inset-0 z-0">
         <Scene3D />
