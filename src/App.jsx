@@ -14,6 +14,7 @@ import SmoothScroll from "./components/SmoothScroll"
 import LoaderScreen from "./components/LoaderScreen"
 import CustomCursor from "./components/CustomCursor"
 import AmbientMusic from "./components/AmbientMusic"
+
 import CreativeProcessSection from "./components/CreativeProcessSection"
 function App() {
   return (
